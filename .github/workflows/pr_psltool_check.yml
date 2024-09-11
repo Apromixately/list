@@ -1,4 +1,4 @@
-name: pr-psltool-fmt
+name: pr-psltool
 
 on:
   pull_request:
@@ -18,3 +18,4 @@ jobs:
         run: |
           cd tools
           go run ./psltool fmt -d ../public_suffix_list.dat
+          go run ./psltool validate ../public_suffix_list.dat
